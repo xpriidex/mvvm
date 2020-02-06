@@ -23,10 +23,11 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        //nextButton.setOnClickListener {
-        //    findNavController().navigate(R.id.action_mainFragment_to_firstFragment)
-        //}
+        nextButton.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToFirstFragment("Cabre")
+            findNavController().navigate(action)
+        }
 
-        nextButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_firstFragment))
+        //nextButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_firstFragment))
     }
 }

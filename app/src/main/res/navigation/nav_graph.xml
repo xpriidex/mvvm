@@ -24,5 +24,9 @@
         android:id="@+id/firstFragment"
         android:name="com.mvvm.demo.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first" >
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+    </fragment>
 </navigation>
